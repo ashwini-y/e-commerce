@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Demo Title</title>
+
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	<link href="css/price-range.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+	<!-- Favicons -->
+	<link href="img/favicon.png" rel="icon">
+	<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+		rel="stylesheet">
+
+	<!-- Bootstrap CSS File -->
+	<!-- <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+	<!-- Libraries CSS Files -->
+	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="lib/animate/animate.min.css" rel="stylesheet">
+	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+	<!-- Main Stylesheet File -->
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+		.cf:before,
+		.cf:after {
+			content: "";
+			display: table;
+		}
+
+		.cf:after {
+			clear: both;
+		}
+
+		.cf {
+			zoom: 1;
+		}
+
+		/* Form wrapper styling */
+		.search-wrapper {
+			width: 220px;
+			margin: 45px auto 50px auto;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+		}
+
+		/* Form text input */
+
+		.search-wrapper input {
+			width: 138px;
+			height: 20px;
+			padding: 10px 5px;
+			float: left;
+			font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+			border: 0;
+			background: #EEE;
+			border-radius: 3px 0 0 3px;
+		}
+
+		.search-wrapper input:focus {
+			outline: 0;
+			background: #fff;
+			box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+		}
+
+		.search-wrapper input::-webkit-input-placeholder {
+			color: #999;
+			font-weight: normal;
+			font-style: italic;
+		}
+
+		.search-wrapper input:-moz-placeholder {
+			color: #999;
+			font-weight: normal;
+			font-style: italic;
+		}
+
+		.search-wrapper input:-ms-input-placeholder {
+			color: #999;
+			font-weight: normal;
+			font-style: italic;
+		}
+
+		/* Form submit button */
+		.search-wrapper button {
+			overflow: visible;
+			position: relative;
+			float: right;
+			border: 0;
+			padding: 0;
+			cursor: pointer;
+			height: 40px;
+			width: 72px;
+			font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+			color: white;
+			text-transform: uppercase;
+			background: #D83C3C;
+			border-radius: 0 3px 3px 0;
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+		}
+
+		.search-wrapper button:hover {
+			background: #e54040;
+		}
+
+		.search-wrapper button:active,
+		.search-wrapper button:focus {
+			background: #c42f2f;
+			outline: 0;
+		}
+
+		.search-wrapper button:before {
+			/* left arrow */
+			content: '';
+			position: absolute;
+			border-width: 8px 8px 8px 0;
+			border-style: solid solid solid none;
+			border-color: transparent #d83c3c transparent;
+			top: 12px;
+			left: -6px;
+		}
+
+		.search-wrapper button:hover:before {
+			border-right-color: #e54040;
+		}
+
+		.search-wrapper button:focus:before,
+		.search-wrapper button:active:before {
+			border-right-color: #c42f2f;
+		}
+
+		.search-wrapper button::-moz-focus-inner {
+			/* remove extra button spacing for Mozilla Firefox */
+			border: 0;
+			padding: 0;
+		}
+
+		.bg-color {
+			background-color: black;
+		}
+
+		.slider-margin {
+			margin-top: 93px;
+		}
+
+		.m-l-80 {
+			margin-left: 80px;
+		}
+
+		.m-r-80 {
+			margin-right: 80px;
+		}
+
+		.product-list {
+			margin: 0px 59px;
+		}
+
+		.search-input {
+			font-size: 14px;
+		}
+
+		.filter-container {
+			margin: 0px 13px;
+			font-size: 12px;
+		}
+
+
+		.custom-modal input {
+			font-size: 13px;
+		}
+
+		.modal-btn {
+			font-size: 14px;
+			margin-top: unset !important;
+		}
+
+		.productinfo a {
+			font-size: 15px;
+		}
+
+		.custom-modal-title {
+			font-weight: 800;
+			font-size: 14px;
+		}
+
+		label {
+			font-size: 13px;
+		}
+
+		.custom-dialog {
+			margin: 0px 22px;
+		}
+
+		.custom-modal-header {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.slider-row{
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	</style>
+</head>
+<!--/head-->
+
+<body>
+	<!--==========================
+    Header
+  ============================-->
+	<header id="header" class="bg-color">
+		<div class="container-fluid">
+
+			<div id="logo" class="pull-left">
+				<h1><a href="#intro" class="scrollto">TITLE</a></h1>
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+			</div>
+
+			<nav id="nav-menu-container">
+				<ul class="nav-menu">
+					<li><a href="index.html#intro">Home</a></li>
+					<li><a href="index.html#about">About Us</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li class="menu-active"><a href="product.html">Product</a></li>
+					<li><a href="index.html#team">Team</a></li>
+					<!-- <li class="menu-has-children"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li> -->
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav><!-- #nav-menu-container -->
+		</div>
+	</header><!-- #header -->
+
+	<section id="slider" class="slider-margin">
+		<!--slider-->
+		<div class="">
+			<div class="row slider-row">
+				<div class="col-sm-12 m-0 p-0">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+									<h1>Website Title</h1>
+									<h2>All items in one place</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua. </p>
+									<!-- <button type="button" class="btn btn-default get">Get it now</button> -->
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
+									<!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+									<h1>Website Title</h1>
+									<h2>100% of Quality</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua. </p>
+									<!-- <button type="button" class="btn btn-default get">Get it now</button> -->
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
+									<!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="col-sm-6">
+									<h1>Website Title</h1>
+									<h2>All items in one place</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua. </p>
+									<!-- <button type="button" class="btn btn-default get">Get it now</button> -->
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
+									<!-- <img src="images/home/pricing.png" class="pricing" alt="" /> -->
+								</div>
+							</div>
+
+						</div>
+
+						<a href="#slider-carousel" class="left control-carousel hidden-xs m-l-80" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs m-r-80" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/slider-->
+
+	<section>
+		<div class="">
+			<div class="row p-0 product-list">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2>Filters</h2>
+
+						<div class="panel-group category-products" id="accordian">
+							<!--category-productsr-->
+							<div>
+								<div class="filter-container">
+									<div class="form-group">
+										<input type="text" class="form-control search-input" id="usr"
+											placeholder="Search">
+									</div>
+
+
+									<div title="Wrangler" class="mx-2 mt-2">
+										<div>
+											<label><input type="checkbox" class="_3uUUD5" readonly="" value="on">
+												<span class="_1GEhLw">Wrangler</span>
+											</label>
+										</div>
+									</div>
+									<div title="Levi's" class="mx-2 mt-2">
+										<div>
+											<label><input type="checkbox" readonly="" value="on">
+												<span class="_1GEhLw">Levi's</span>
+											</label>
+										</div>
+									</div>
+									<div title="Lee" class="mx-2 mt-2">
+										<div>
+											<label><input type="checkbox" class="_3uUUD5" readonly="" value="on">
+
+												<span class="_1GEhLw">Lee</span>
+											</label>
+										</div>
+									</div>
+									<div title="U.S. Polo Assn" class="mx-2 mt-2">
+										<div class="_2wQvxh _1WV8jE">
+											<label><input type="checkbox" readonly="" value="on">
+												<span>U.S. Polo Assn</span>
+											</label>
+										</div>
+									</div>
+									<div title="W" class="mx-2 mt-2">
+										<div class="_2wQvxh _1WV8jE">
+											<label><input type="checkbox" readonly="" value="on">
+
+												<span class="_1GEhLw">W</span>
+											</label>
+										</div>
+									</div>
+									<div title="United Colors of Benetton" class="mx-2 mt-2">
+										<div>
+											<label><input type="checkbox" class="_3uUUD5" readonly="" value="on">
+												<span>United Colors of Benetton</span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<!-- <div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Sportswear
+										</a>
+									</h4>
+								</div>
+								<div id="sportswear" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Nike </a></li>
+											<li><a href="#">Under Armour </a></li>
+											<li><a href="#">Adidas </a></li>
+											<li><a href="#">Puma</a></li>
+											<li><a href="#">ASICS </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Mens
+										</a>
+									</h4>
+								</div>
+								<div id="mens" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Fendi</a></li>
+											<li><a href="#">Guess</a></li>
+											<li><a href="#">Valentino</a></li>
+											<li><a href="#">Dior</a></li>
+											<li><a href="#">Versace</a></li>
+											<li><a href="#">Armani</a></li>
+											<li><a href="#">Prada</a></li>
+											<li><a href="#">Dolce and Gabbana</a></li>
+											<li><a href="#">Chanel</a></li>
+											<li><a href="#">Gucci</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Womens
+										</a>
+									</h4>
+								</div>
+								<div id="womens" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Fendi</a></li>
+											<li><a href="#">Guess</a></li>
+											<li><a href="#">Valentino</a></li>
+											<li><a href="#">Dior</a></li>
+											<li><a href="#">Versace</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Kids</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Fashion</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Households</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Interiors</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Clothing</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Bags</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Shoes</a></h4>
+								</div>
+							</div> -->
+						</div>
+						<!--/category-products-->
+
+						<!-- <div class="brands_products">
+							<h2>Brands</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
+									<li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
+									<li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
+									<li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
+									<li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
+									<li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
+									<li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+								</ul>
+							</div>
+						</div> -->
+
+						<!-- <div class="price-range">
+							<h2>Price Range</h2>
+							<div class="well text-center">
+								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
+								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+							</div>
+						</div> -->
+
+
+
+					</div>
+				</div>
+
+				<div class="col-sm-9 padding-right">
+					<div class="features_items">
+						<!--features_items-->
+						<h2 class="title text-center">Collections</h2>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product1.jpg" alt="" />
+										<!-- <h2>$56</h2> -->
+										<p>Easy Polo Black Edition</p>
+										<a href="#" class="btn btn-default add-to-cart" data-toggle="modal"
+											data-target="#myModal"><i class="fa fa-shopping-cart"></i>Order</a>
+									</div>
+
+								</div>
+								<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div> -->
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product2.jpg" alt="" />
+										<!-- <h2>$56</h2> -->
+										<p>Easy Polo Black Edition</p>
+										<a href="#" class="btn btn-default add-to-cart"><i
+												class="fa fa-shopping-cart"></i>Order</a>
+									</div>
+
+								</div>
+								<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div> -->
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product3.jpg" alt="" />
+										<!-- <h2>$56</h2> -->
+										<p>Easy Polo Black Edition</p>
+										<a href="#" class="btn btn-default add-to-cart"><i
+												class="fa fa-shopping-cart"></i>Order</a>
+									</div>
+
+								</div>
+								<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div> -->
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product4.jpg" alt="" />
+										<!-- <h2>$56</h2> -->
+										<p>Easy Polo Black Edition</p>
+										<a href="#" class="btn btn-default add-to-cart"><i
+												class="fa fa-shopping-cart"></i>Order</a>
+									</div>
+
+									<!-- <img src="images/home/new.png" class="new" alt="" /> -->
+								</div>
+								<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div> -->
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product5.jpg" alt="" />
+										<!-- <h2>$56</h2> -->
+										<p>Easy Polo Black Edition</p>
+										<a href="#" class="btn btn-default add-to-cart"><i
+												class="fa fa-shopping-cart"></i>Order</a>
+									</div>
+
+									<!-- <img src="images/home/sale.png" class="new" alt="" /> -->
+								</div>
+								<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div> -->
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product6.jpg" alt="" />
+										<!-- <h2>$56</h2> -->
+										<p>Easy Polo Black Edition</p>
+										<a href="#" class="btn btn-default add-to-cart"><i
+												class="fa fa-shopping-cart"></i>Order</a>
+									</div>
+
+								</div>
+								<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div> -->
+							</div>
+						</div>
+
+					</div>
+					<!--features_items-->
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--==========================
+    Footer
+  ============================-->
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 footer-info">
+						<h3>TITLE</h3>
+						<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
+							valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet
+							proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Useful Links</h4>
+						<ul>
+							<li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
+							<!-- <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li> -->
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-contact">
+						<h4>Contact Us</h4>
+						<p>
+							62456as sdsfd Street <br>
+							jsjhgf city, 4565465<br>
+							country name <br>
+							<strong>Phone:</strong> +91 4564564565<br>
+							<strong>Email:</strong> info@example.com<br>
+						</p>
+
+						<!-- <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div> -->
+
+					</div>
+
+					<!-- <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit"  value="Subscribe">
+            </form>
+          </div> -->
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="copyright">
+				&copy; Copyright <strong>TITLE</strong>. All Rights Reserved
+			</div>
+			<!-- <div class="credits">
+       
+        Best <a href="https://bootstrapmade.com/">Bootstrap Templates</a> by BootstrapMade
+      </div> -->
+		</div>
+	</footer><!-- #footer -->
+
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
+
+<div class="modal fade custom-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header custom-modal-header">
+				<h5 class="modal-title custom-modal-title" id="exampleModalCenterTitle">Add details</h5>
+				<button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="email">Name:</label>
+						<input type="text" class="form-control" id="email" placeholder="Enter Your Name">
+					</div>
+					<div class="form-group">
+						<label for="email">Contact Number:</label>
+						<input type="text" class="form-control" id="email" placeholder="Enter Contact Number">
+					</div>
+					<div class="form-group">
+						<label for="pwd">Number Of Items:</label>
+						<input type="text" class="form-control" id="pwd" placeholder="Enter Number Of Items">
+					</div>
+					<div class="form-group">
+						<label for="pwd">More Details About Your Requirements:</label>
+						<textarea class="form-control"></textarea>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary modal-btn" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary modal-btn">Order Now</button>
+			</div>
+		</div>
+	</div>
+</div>
